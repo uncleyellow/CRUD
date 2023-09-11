@@ -1,0 +1,16 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="exampleModalLabel">{{ 'Add User' }}</h4>
+    <button type="button" class="btn-close" (click)="activeModal.close('by: close icon')" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row mb-3">
+      <input type="item" class="form-control" placeholder="Name" [(ngModel)]="name">
+    </div>
+    <div class="row mb-3">
+        <input type="item" class="form-control" placeholder="Email" [(ngModel)]="email">
+      </div>
+  </div>
+  <div class="d-flex justify-content-center mt-2">
+    <button class="btn btn-primary me-2" type="button" (click)="save(item)">Save</button>
+    <button class="btn btn-secondary me-2" type="button" (click)="activeModal.close('by: close icon')">Close</button>
+  </div>

@@ -42,6 +42,45 @@ export class AddUserComponent implements OnInit {
       name: this.name,
       email: this.email
     };
+  if(this.name.length < 2){
+      Swal.fire({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        title: 'Add User Error',
+        text: 'Please enter a name with at least 2 characters.',
+        icon: 'error',
+      });
+      return
+    }
+    if(this.name.length > 50){
+      Swal.fire({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        title: 'Add User Error',
+        text: 'Please enter a name with max 50 characters.',
+        icon: 'error',
+      });
+      return
+    }
+    if (!this.email.includes('@')) {
+      Swal.fire({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        title: 'Add User Error',
+        text: 'Please enter a valid email address.',
+        icon: 'error',
+      });
+      return;
+    }
     this.userService.addUser(user).subscribe(
       response => {
         console.log(response); // Xử lý phản hồi từ server

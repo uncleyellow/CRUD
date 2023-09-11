@@ -2934,11 +2934,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CRUD angular\\APi\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "D:\\CRUD\\APi\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "D:\\CRUD angular\\APi\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "D:\\CRUD\\APi\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\CRUD angular\\APi\\WebApplication1\\obj\\",
+      "outputPath": "D:\\CRUD\\APi\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

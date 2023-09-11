@@ -42,6 +42,20 @@ export class AddUserComponent implements OnInit {
       name: this.name,
       email: this.email
     };
+    const regex = /[!@#$%^&*(),.?":{}|<>]/; // Biểu thức chính quy để kiểm tra ký tự đặc biệt
+    if (regex.test(this.name)) {
+      Swal.fire({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        title: 'Add User Error',
+        text: 'Please do not enter special characters in the name.',
+        icon: 'error',
+      });
+      return;
+    }
   if(this.name.length < 2){
       Swal.fire({
         toast: true,

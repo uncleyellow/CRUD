@@ -1,6 +1,8 @@
 <div class="modal-header">
     <h4 class="modal-title" id="exampleModalLabel">{{ 'Delete User' }}</h4>
-    <button type="button" class="btn-close" (click)="activeModal.close('by: close icon')" aria-label="Close"></button>
+    <button type="button" mat-icon-button  (click)="activeModal.close('by: close icon')" aria-label="Close">
+      <mat-icon>close</mat-icon>
+    </button>
   </div>
   
   <div class="modal-body">

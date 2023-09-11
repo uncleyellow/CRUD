@@ -76,16 +76,10 @@ export class TableListComponent implements OnInit {
       this.items = data;
     });
   }
-  search(item:any){
-    this.userService.searchUsers(item).subscribe(
-      response => {
-        // Xử lý phản hồi từ server
-        console.log(response);
-      },
-      error => {
-        // Xử lý lỗi (nếu có)
-        console.error(error);
-      }
-    );
+  searchUsers(item:any): void {
+    this.userService.searchUsers(item)
+      .subscribe((data: any) => {
+        this.items = data;
+      });
   }
 }

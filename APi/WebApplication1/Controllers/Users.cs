@@ -15,7 +15,15 @@ namespace WebApplication1.Controllers
         {
             _configuration = configuration;
         }
+        [HttpGet("search")]
+        public JsonResult Search(string searchTerm)
+        {
+            string query = $"SELECT id, name, email FROM users WHERE LOWER(name) LIKE '%' + LOWER('{searchTerm}') + '%' OR LOWER(email) LIKE '%' + LOWER('{searchTerm}') + '%'";
 
+            DataTable table = QuerryExtension.ExecuteQuery(query);
+
+            return new JsonResult(table);
+        }
         [HttpGet]
         public JsonResult Get()
         {

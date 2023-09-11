@@ -39,8 +39,9 @@ export class UserService {
 
     return this.http.delete<any>(`${this.apiUrl}/${userId}`, { headers });
   }
+		
   searchUsers(searchTerm: string): Observable<any> {
-    const params = new HttpParams().set('searchTerm', searchTerm);
-    return this.http.get<any>(`${this.apiUrl}`, { params });
+    const url = `${this.apiUrl}/search?searchTerm=${searchTerm}`;
+    return this.http.get(url);
   }
 }
